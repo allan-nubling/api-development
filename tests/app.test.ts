@@ -1,5 +1,18 @@
-import { sum } from '../src/app';
+import request from 'supertest'
+import app from '@config/app'
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
-});
+describe('Test the root path', () => {
+    test('It should response the GET method', () => {
+        return request(app).get('/').expect(200)
+    })
+
+    test('It should response the GET /test method', () => {
+        return request(app)
+            .get('/test')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .expect(resp => {
+                if (typeof resp.body.message !== 'string') throw new Error('Response message worng type')
+            })
+    })
+})

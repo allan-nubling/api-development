@@ -4,20 +4,21 @@
         "module": "commonjs",
         "sourceMap": true,
         "outDir": "build",
-        "rootDir": "./src",
+        "rootDir": ".",
         "removeComments": true,
+        "skipLibCheck": true,
         "esModuleInterop": true,
         "moduleResolution": "node",
         "typeRoots": ["./node_modules/@types", "src/types"],
-        "baseUrl": ".",
+        "baseUrl": "./src",
         "paths": {
-            "@config/*": ["./src/config/*"],
-            "@jobs/*": ["./src/jobs/*"],
-            "@services/*": ["./src/services/*"],
-            "@models/*": ["./src/models/*"],
-            "@utils/*": ["./src/utils/*"],
-            "@controllers/*": ["./src/controllers/*"]
+            "@config/*": ["config/*"],
+            "@jobs/*": ["jobs/*"],
+            "@services/*": ["services/*"],
+            "@models/*": ["models/*"],
+            "@utils/*": ["utils/*"],
+            "@controllers/*": ["controllers/*"]
         }
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "tests/**/*"]
 }
