@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+    test:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        container_name: api-test
+        env_file: .env.development
+        volumes:
+            - ./src:/app/src
+        ports:
+            - '3000:3000'
+            - '8181:8181'
+        command: npm run test
+    dev:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        container_name: api-dev
+        env_file: .env.development
+        volumes:
+            - ./src:/app/src
+        ports:
+            - '3000:3000'
+            - '8181:8181'
+        command: npm run dev
