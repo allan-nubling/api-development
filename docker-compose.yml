@@ -10,7 +10,7 @@ services:
         volumes:
             - ./src:/app/src
         ports:
-            - '3000:3000'
+            - '$PORT:$PORT'
             - '8181:8181'
         command: npm run test
     dev:
@@ -22,6 +22,6 @@ services:
         volumes:
             - ./src:/app/src
         ports:
-            - '3000:3000'
+            - '$PORT:$PORT'
             - '8181:8181'
         command: npm run dev

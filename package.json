@@ -9,7 +9,7 @@
     "scripts": {
         "test": "jest",
         "lint": "eslint --fix ./src/*",
-        "dev": "ts-node-dev --inspect=3030 --respawn --transpile-only src/server.ts"
+        "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/server.ts"
     },
     "devDependencies": {
         "@types/body-parser": "^1.19.0",
