@@ -21,6 +21,6 @@ services:
         volumes:
             - ./src:/app/src
         ports:
-            - '$PORT:$PORT'
+            - '3030:3030'
             - '8181:8181'
         command: npm run dev
