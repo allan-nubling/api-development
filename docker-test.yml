@@ -6,8 +6,6 @@ services:
             context: .
             dockerfile: Dockerfile.dev
         container_name: api-test
-        environment:
-            - PORT=3000
         volumes:
             - .:/app
         ports:
