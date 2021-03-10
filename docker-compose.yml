@@ -6,10 +6,10 @@ services:
             context: .
             dockerfile: Dockerfile.dev
         container_name: api-dev
-        env_file: .env.example
         volumes:
-            - ./src:/app/src
+            - .:/app
+        environment: 
+            - PORT=$PORT
         ports:
             - '$PORT:$PORT'
-            - '8181:8181'
-        command: npm run dev
+        command: npm run dev:docker

@@ -2,8 +2,6 @@ FROM node:14.16.0
 
 WORKDIR /app
 
-ADD . .
-
-ENV NODE_ENV=development
+ADD package*.json ./
 
 RUN npm i

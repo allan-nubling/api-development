@@ -12,4 +12,4 @@ USER node
 
 EXPOSE $PORT
 
-CMD [ "node", "build/index.js" ]
+CMD [ "node", "build/server.js" ]

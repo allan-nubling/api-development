@@ -55,7 +55,7 @@ module.exports = {
         'import-helpers/order-imports': [
             'warn',
             {
-                newlinesBetween: 'always', // new line between groups
+                newlinesBetween: 'always',
                 groups: ['module', '/^@server/shared/', '/^@/', ['parent', 'sibling', 'index']],
                 alphabetize: { order: 'asc', ignoreCase: true }
             }
@@ -64,7 +64,7 @@ module.exports = {
     settings: {
         'import/resolver': {
             typescript: {
-                project: 'tsconfig.json'
+                project: 'tsconfig.dev.json'
             }
         }
     }

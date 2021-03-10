@@ -9,7 +9,8 @@ routes.get('/', async (req, res) => {
 })
 
 routes.get('/test', async (req, res) => {
-    res.send({ message: 'Ok' })
+    console.log("test")
+    res.send({ message: 'ok' })
 })
 
 routes.post('/example', ExampleController.show)
