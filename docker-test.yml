@@ -1,15 +1,15 @@
 version: '3.7'
 
 services:
-    dev:
+    test:
         build:
             context: .
             dockerfile: Dockerfile.dev
-        container_name: api-dev
+        container_name: api-test
         env_file: .env.example
         volumes:
             - ./src:/app/src
+            - ./tests:/app/tests
         ports:
             - '$PORT:$PORT'
-            - '8181:8181'
-        command: npm run dev
+        command: npm run test
