@@ -7,11 +7,9 @@ services:
             dockerfile: Dockerfile.dev
         container_name: api-dev
         environment:
-            - PORT=3000
+            - PORT=$PORT
         volumes:
             - .:/app
-        environment: 
-            - PORT=$PORT
         ports:
             - '$PORT:$PORT'
         command: npm run dev:docker

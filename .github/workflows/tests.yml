@@ -1,6 +1,9 @@
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
-env:
-    PORT: 3000
 jobs:
     build:
         runs-on: ubuntu-latest
