@@ -10,7 +10,10 @@ services:
         environment:
             - PORT=$PORT
         volumes:
-            - .:/app
+            - ./src:/app/src
+            - ./tests:/app/tests
+            - ./jest.config.ts:/app/jest.config.ts
+            - ./tsconfig.json:/app/tsconfig.json
         ports:
             - '$PORT:$PORT'
         command: npm run dev:docker
