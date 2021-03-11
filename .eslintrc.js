@@ -13,8 +13,8 @@ module.exports = {
         'no-prototype-builtins': 'off',
         'no-restricted-syntax': 'off',
         'max-classes-per-file': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        'no-console': 'off',
+        '@typescript-eslint/no-explicit-any': 'warn',
+        'no-console': 'warn',
         'import/prefer-default-export': 'off',
         '@typescript-eslint/explicit-function-return-type': ['off'],
         '@typescript-eslint/no-unused-vars': [

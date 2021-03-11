@@ -4,15 +4,17 @@ import ExampleController from '@controllers/ExampleController'
 
 const routes = Router()
 
-routes.get('/', async (req, res) => {
+routes.get('/', async (_req, res) => {
     res.send('⚡️[server]: Server is running')
 })
 
-routes.get('/test', async (req, res) => {
-    console.log("test")
-    res.send({ message: 'ok' })
-})
+routes.post('/example', ExampleController.save)
 
-routes.post('/example', ExampleController.show)
+routes.all('*', (_req, res) => {
+    return res.status(404).json({
+        status: 'error',
+        message: 'route not found'
+    })
+})
 
 export default routes

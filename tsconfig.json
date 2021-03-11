@@ -17,7 +17,8 @@
             "@services/*": ["services/*"],
             "@models/*": ["models/*"],
             "@utils/*": ["utils/*"],
-            "@controllers/*": ["controllers/*"]
+            "@controllers/*": ["controllers/*"],
+            "@middlewares/*": ["middlewares/*"]
         }
     },
     "include": ["src/**/*", "tests/**/*"]
