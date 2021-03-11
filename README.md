@@ -14,6 +14,8 @@ Utilizamos Jest e Supertest para realizar os testes da aplicação.
 run $ docker-compose -f docker-test.yml up
 ou
 run $ npm run docker:test
+ou
+run $ npm run test
 ```
 
 ## Dev:
@@ -24,6 +26,8 @@ Utilizamos ts-node-dev para recarregar a api sempre que salvarmos um arquivo.
 run $ docker-compose up
 ou
 run $ npm run docker:dev
+ou
+run $ npm run dev
 ```
 
 ## Deploy:
