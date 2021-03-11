@@ -12,5 +12,5 @@ services:
         volumes:
             - .:/app
         ports:
-            - '3000:$PORT'
+            - '$PORT:$PORT'
         command: npm run dev:docker
