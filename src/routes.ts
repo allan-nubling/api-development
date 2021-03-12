@@ -10,11 +10,11 @@ routes.get('/', async (_req, res) => {
 
 routes.post('/example', ExampleController.save)
 
-routes.all('*', (_req, res) => {
-    return res.status(404).json({
+routes.all('*', (_req, res) =>
+    res.status(404).json({
         status: 'error',
         message: 'route not found'
     })
-})
+)
 
 export default routes

@@ -1,5 +1,6 @@
-import { BadRequest, NotFound, Unauthorized } from '@utils/errors'
 import { NextFunction, Request, Response } from 'express'
+
+import { BadRequest, NotFound, Unauthorized } from '@utils/errors'
 
 class ExampleController {
     async save(req: Request, res: Response, next: NextFunction): Promise<void> {
