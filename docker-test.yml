@@ -11,8 +11,6 @@ services:
         volumes:
             - ./src:/app/src
             - ./tests:/app/tests
-            - ./jest.config.ts:/app/jest.config.ts
-            - ./tsconfig.json:/app/tsconfig.json
         ports:
-            - '3001:3001'
+            - '$PORT:3000'
         command: npm run test

@@ -2,14 +2,16 @@ FROM node:14-alpine
 
 WORKDIR /home/node/app
 
-ADD . .
+COPY package*.json .
 
-ENV NODE_ENV=production
+COPY build ./build
+
+ENV NODE_ENV=production 
 
 RUN npm ci
 
 USER node
 
-EXPOSE $PORT
+EXPOSE 3000
 
 CMD [ "node", "build/server.js" ]
